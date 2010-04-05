@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Dornier DO 26 : Emmanuel BARANGER    2009
+
+       Source   : http://en.wikipedia.org/wiki/Dornier_Do_26
+
+       Wingspan     : 30.00 m  (      98 ft 5 in)
+       Lenght       : 24.50 m  (      80 ft 5 in)
+       Height       :  6.90 m  (      22 ft 8 in)
+       Weight       : 10200 kg (   22487 lb)
+       Cruise speed : 310 km/h (  167.39 kt)
+       Engines      : 4 Junkers Jumo 205C Diesel (600 hp each)
+-->
+<airplane mass="22487">
+
+  <approach speed="76" aoa="11">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.4"/>
+    <control-setting axis="/controls/engines/engine[1]/throttle" value="0.4"/>
+    <control-setting axis="/controls/engines/engine[2]/throttle" value="0.4"/>
+    <control-setting axis="/controls/engines/engine[3]/throttle" value="0.4"/>
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="1"/>
+    <control-setting axis="/controls/engines/engine[1]/mixture" value="1"/>
+    <control-setting axis="/controls/engines/engine[2]/mixture" value="1"/>
+    <control-setting axis="/controls/engines/engine[3]/mixture" value="1"/>
+    <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="0.5"/>
+    <control-setting axis="/controls/engines/engine[1]/propeller-pitch" value="0.5"/>
+    <control-setting axis="/controls/engines/engine[2]/propeller-pitch" value="0.5"/>
+    <control-setting axis="/controls/engines/engine[3]/propeller-pitch" value="0.5"/>
+    <control-setting axis="/controls/flight/flaps" value="1"/>
+    <control-setting axis="/controls/gear/gear-down" value="1"/>
+  </approach>
+
+  <cruise speed="170" alt="7600">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="1"/>
+    <control-setting axis="/controls/engines/engine[1]/throttle" value="1"/>
+    <control-setting axis="/controls/engines/engine[2]/throttle" value="1"/>
+    <control-setting axis="/controls/engines/engine[3]/throttle" value="1"/>
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="1"/>
+    <control-setting axis="/controls/engines/engine[1]/mixture" value="1"/>
+    <control-setting axis="/controls/engines/engine[2]/mixture" value="1"/>
+    <control-setting axis="/controls/engines/engine[3]/mixture" value="1"/>
+    <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="1"/>
+    <control-setting axis="/controls/engines/engine[1]/propeller-pitch" value="1"/>
+    <control-setting axis="/controls/engines/engine[2]/propeller-pitch" value="1"/>
+    <control-setting axis="/controls/engines/engine[3]/propeller-pitch" value="1"/>
+    <control-setting axis="/controls/engines/engine[0]/boost" value="1"/>
+    <control-setting axis="/controls/engines/engine[1]/boost" value="1"/>
+    <control-setting axis="/controls/engines/engine[2]/boost" value="1"/>
+    <control-setting axis="/controls/engines/engine[3]/boost" value="1"/>
+    <control-setting axis="/controls/flight/flaps" value="0"/>
+    <control-setting axis="/controls/gear/gear-down" value="0"/>
+  </cruise>
+
+  <cockpit x="7.65" y="0.54" z="-1.17"/>
+
+  <fuselage ax="12.300" ay="0" az="-2.128" bx="-4.200" by="0" bz="-1.730" width="2.521" taper="0.5" midpoint="0.6"/>
+
+  <fuselage ax="-4.200" ay="0" az="-1.730" bx="-12.342" by="0" bz="-0.053" width="1.26" taper="1" midpoint="0.5"/>
+
+  <wing x="2.605" y="4.034" z="-0.193" 
+        chord="4.782" 
+        length="10.927" 
+        camber="0.2"
+        taper="0.507" 
+        sweep="6" 
+        dihedral="3">
+        <stall aoa="14" width="6" peak="1.5"/>
+        <flap0 start="0.01" end="0.29" lift="1.4" drag="1.4"/>
+        <flap1 start="0.31" end="0.95" lift="1.4" drag="1.2"/>
+
+        <control-input axis="/controls/flight/flaps" control="FLAP0"/>
+        <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
+        <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
+
+        <control-output control="FLAP0" prop="/surface-positions/flap-pos-norm"/>
+        <control-output control="FLAP1" side="left" prop="/surface-positions/left-aileron-pos-norm"/>
+        <control-output control="FLAP1" side="right" prop="/surface-positions/right-aileron-pos-norm"/>
+
+        <control-speed control="FLAP0" transition-time="5"/>
+  </wing>
+
+  <mstab x="2.605" y="0.920" z="-0.923" 
+        chord="4.782" 
+        length="3.175" 
+        camber="0.1"
+        dihedral="13">
+        <flap0 start="0.12" end="0.95" lift="1.4" drag="1.4"/>
+
+        <control-input axis="/controls/flight/flaps" control="FLAP0"/>
+
+        <control-speed control="FLAP0" transition-time="5"/>
+  </mstab>
+
+  <hstab x="-10.28" y="0" z="0.304" 
+         chord="2.71" 
+         length="4.25" 
+         taper="0.6" 
+         sweep="2"
+         dihedral="1">
+         <stall aoa="18" width="3" peak="1.5"/>
+         <flap0 start="0" end="1.1" lift="1.8" drag="1.9"/>
+
+         <control-input axis="/controls/flight/elevator" control="FLAP0" />
+         <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
+
+         <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
+  </hstab>
+
+  <vstab x="-10.326" y="0" z="-0.872" 
+         chord="4.345" 
+         length="4.31" 
+         taper="0.3" 
+         sweep="10">
+         <stall aoa="14" width="3" peak="1.5"/>
+         <flap0 start="0.22" end="1" lift="1.5" drag="1.5"/>
+
+         <control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
+         <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
+
+         <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm"/>
+  </vstab>
+
+  <!-- Engines   source            : http://en.wikipedia.org/wiki/Junkers_Jumo_205
+
+                 name              : Junkers Jumo 205
+                 type              : Six-cylinder 12-piston liquid-cooled opposed piston inline two-stroke diesel engine
+                 power cruise      : 867 hp at 2800 rpm
+                 weight            :     595 kg (1312 lb)
+                 displacement      : 16.63 L (1015 in3)
+                 compression       : 17:1
+  -->
+  <!-- Avant gauche -->
+  <propeller x="5.338" y="2.895" z="-0.116"
+             radius="1.9375" 
+             mass="1312" 
+             moment="64.5"
+             cruise-alt="1500" 
+             cruise-power="1200"
+             cruise-speed="150" 
+             cruise-rpm="1056"
+             gear-ratio="0.44"
+             min-rpm="766" 
+             max-rpm="1237" 
+             contra="1">
+             <actionpt x="6.938" y="2.895" z="-0.116"/>
+             <control-input axis="/controls/engines/engine[0]/propeller-pitch" control="ADVANCE" />
+             <piston-engine eng-power="880"
+                            eng-rpm="2900"
+                            displacement="1312"
+                            compression="5.8"/>
+             <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
+             <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
+             <control-input axis="/controls/engines/engine[0]/magnetos" control="MAGNETOS"/>
+             <control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>
+             <control-input axis="/controls/engines/engine[0]/boost" control="BOOST"/>
+  </propeller>
+
+  <!-- Arriere gauche -->
+  <propeller x="1.181" y="2.895" z="0.011"
+             radius="1.9375" 
+             mass="1312" 
+             moment="64.5"
+             cruise-alt="1500" 
+             cruise-power="1200"
+             cruise-speed="150" 
+             cruise-rpm="1056"
+             gear-ratio="0.44"
+             min-rpm="766" 
+             max-rpm="1237" 
+             contra="1">
+             <actionpt x="-0.219" y="2.895" z="0.011"/>
+             <control-input axis="/controls/engines/engine[1]/propeller-pitch" control="ADVANCE" />
+             <piston-engine eng-power="880"
+                            eng-rpm="2900"
+                            displacement="1312"
+                            compression="5.8"/>
+             <control-input axis="/controls/engines/engine[1]/throttle" control="THROTTLE"/>
+             <control-input axis="/controls/engines/engine[1]/starter" control="STARTER"/>
+             <control-input axis="/controls/engines/engine[1]/magnetos" control="MAGNETOS"/>
+             <control-input axis="/controls/engines/engine[1]/mixture" control="MIXTURE"/>
+             <control-input axis="/controls/engines/engine[1]/boost" control="BOOST"/>
+  </propeller>
+
+  <!-- Avant droit -->
+  <propeller x="5.338" y="-2.895" z="-0.116"
+             radius="1.9375" 
+             mass="1312" 
+             moment="64.5"
+             cruise-alt="1500" 
+             cruise-power="1200"
+             cruise-speed="150" 
+             cruise-rpm="1056"
+             gear-ratio="0.44"
+             min-rpm="766" 
+             max-rpm="1237" 
+             contra="1">
+             <actionpt x="6.938" y="-2.895" z="-0.116"/>
+             <control-input axis="/controls/engines/engine[2]/propeller-pitch" control="ADVANCE" />
+             <piston-engine eng-power="880"
+                            eng-rpm="2900"
+                            displacement="1312"
+                            compression="5.8"/>
+             <control-input axis="/controls/engines/engine[2]/throttle" control="THROTTLE"/>
+             <control-input axis="/controls/engines/engine[2]/starter" control="STARTER"/>
+             <control-input axis="/controls/engines/engine[2]/magnetos" control="MAGNETOS"/>
+             <control-input axis="/controls/engines/engine[2]/mixture" control="MIXTURE"/>
+             <control-input axis="/controls/engines/engine[2]/boost" control="BOOST"/>
+  </propeller>
+
+  <!-- Arriere droit -->
+  <propeller x="1.181" y="-2.895" z="0.011"
+             radius="1.9375" 
+             mass="1312" 
+             moment="64.5"
+             cruise-alt="1500" 
+             cruise-power="1200"
+             cruise-speed="150" 
+             cruise-rpm="1056"
+             gear-ratio="0.44"
+             min-rpm="766" 
+             max-rpm="1237" 
+             contra="1">
+             <actionpt x="-0.219" y="-2.895" z="0.011"/>
+             <control-input axis="/controls/engines/engine[3]/propeller-pitch" control="ADVANCE" />
+             <piston-engine eng-power="880"
+                            eng-rpm="2900"
+                            displacement="1312"
+                            compression="5.8"/>
+             <control-input axis="/controls/engines/engine[3]/throttle" control="THROTTLE"/>
+             <control-input axis="/controls/engines/engine[3]/starter" control="STARTER"/>
+             <control-input axis="/controls/engines/engine[3]/magnetos" control="MAGNETOS"/>
+             <control-input axis="/controls/engines/engine[3]/mixture" control="MIXTURE"/>
+             <control-input axis="/controls/engines/engine[3]/boost" control="BOOST"/>
+  </propeller>
+
+  <!-- Main fuselage -->
+  <!-- Noze -->
+  <gear x="10.655" y="0" z="-3.733 " 
+        compression="1.2"  
+        spring="15"
+        damp="8"
+        sfric="0.4"
+        dfric="0.3"
+        ignored-by-solver="1"
+        on-water="1"
+        on-solid="0"
+        reduce-friction-by-extension="1.0"
+        speed-planing="25"
+        spring-factor-not-planing="0.2">
+  </gear>
+
+  <!-- Center -->
+  <gear x="2.397" y="0" z="-3.828" 
+        compression="2.4"
+        ignored-by-solver="1"
+        spring="6"
+        damp="8" 
+        sfric="0.4"
+        dfric="0.1" 
+        on-water="1"
+        on-solid="0"
+        reduce-friction-by-extension="1.1"
+        speed-planing="35"
+        spring-factor-not-planing="0.3">
+  </gear>
+
+  <!-- Tail -->
+  <gear x="-4.032" y="0" z="-2.784" 
+        compression="1.1"
+        ignored-by-solver="1"
+        spring="3"
+        damp="8"
+        sfric="0.4"
+        dfric="0.2" 
+        on-water="1"
+        on-solid="0"
+        reduce-friction-by-extension="1.6"
+        speed-planing="25"
+        spring-factor-not-planing="0.9">
+  </gear>
+
+  <!-- wing floats Left -->
+  <gear x="2.790" y="8.182" z="-2.248" 
+        compression="0.3"  
+        spring="0.9"
+        damp="10"
+        sfric="0.8"
+        dfric="0.7"
+        ignored-by-solver="1"
+        on-water="1"
+        on-solid="0"
+        reduce-friction-by-extension="1.25"
+        speed-planing="15"
+        spring-factor-not-planing="0.7">
+        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+        <control-output control="EXTEND" prop="/gear/gear[0]/position-norm"/>
+        <control-speed control="EXTEND" transition-time="5.1"/>
+  </gear>
+
+  <!-- wing floats right -->
+  <gear x="2.790" y="-8.182" z="-2.248" 
+        compression="0.3"  
+        spring="0.9"
+        damp="10"
+        sfric="0.8"
+        dfric="0.7"
+        ignored-by-solver="1"
+        on-water="1"
+        on-solid="0"
+        reduce-friction-by-extension="1.25"
+        speed-planing="15"
+        spring-factor-not-planing="0.7">
+        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+        <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
+        <control-speed control="EXTEND" transition-time="5.1"/>
+  </gear>
+
+  <tank x="7.5" y="0" z="-1.5" capacity="2258"/>
+  <tank x="7.5" y="0" z="-1.5" capacity="2258"/>
+
+  <ballast x="-0.6" y="0.0" z="-3.3" mass="-8000"/> 
+
+</airplane>
+

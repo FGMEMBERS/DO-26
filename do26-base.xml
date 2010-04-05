@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim include="Nasal/views.xml">
+
+    <author>BARANGER Emmanuel (3D)</author>
+    <aircraft-version>0.1</aircraft-version>
+    <status>Alpha</status>
+
+    <fuel-fraction>1.0</fuel-fraction>
+
+    <type type="string">seaplane</type>
+
+    <startup>
+      <splash-texture>Aircraft/DO-26/do26-splash.png</splash-texture>
+    </startup>
+
+    <sound>
+      <path archive="y">Aircraft/DO-26/Sounds/do26-sound.xml</path>
+    </sound>
+
+    <model>
+      <path archive="y">Aircraft/DO-26/Models/do26.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+    </model>
+
+    <panel>
+      <visibility archive="y">false</visibility>
+    </panel>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic>
+        <int type="int">0</int>
+        <int type="int">0</int>
+        <int type="int">0</int>
+        <int type="int">0</int>
+        <int type="int">0</int>
+        <int type="int">0</int>
+      </generic>
+    </multiplay>
+
+    <help>
+      <title>Dornier Do 26</title>
+      <key>
+        <name>g/G</name>
+        <desc>Up/Down floats and Engines</desc>
+      </key>
+    </help>
+
+  </sim>
+
+  <controls>
+    <engines>
+      <engine n="0">
+        <magnetos>3</magnetos>
+        <propeller-pitch>1.0</propeller-pitch>
+      </engine>
+      <engine n="1">
+        <magnetos>3</magnetos>
+        <propeller-pitch>1.0</propeller-pitch>
+      </engine>
+      <engine n="2">
+        <magnetos>3</magnetos>
+        <propeller-pitch>1.0</propeller-pitch>
+      </engine>
+      <engine n="3">
+        <magnetos>3</magnetos>
+        <propeller-pitch>1.0</propeller-pitch>
+      </engine>
+    </engines>
+  </controls>
+
+  <engines>
+    <engine n="0">
+      <rpm>50</rpm>
+    </engine>
+    <engine n="1">
+      <rpm>50</rpm>
+    </engine>
+    <engine n="2">
+      <rpm>50</rpm>
+    </engine>
+    <engine n="3">
+      <rpm>50</rpm>
+    </engine>
+  </engines>
+
+  <input>
+    <keyboard include="Nasal/do26-keyboard.xml"/>
+  </input>
+ 
+  <instrumentation>
+    <doors>
+      <crew>
+        <position-norm>1</position-norm>
+      </crew>
+    </doors>
+  </instrumentation>
+
+  <nasal>
+    <do26>
+      <file>Aircraft/DO-26/Nasal/light.nas</file>
+      <file>Aircraft/DO-26/Nasal/immat.nas</file>
+      <file>Aircraft/DO-26/Nasal/liveries.nas</file>
+    </do26>
+    <doors>
+      <file>Aircraft/DO-26/Nasal/doors.nas</file>
+    </doors>    
+  </nasal>
+  
+</PropertyList>
+
