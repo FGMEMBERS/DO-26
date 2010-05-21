@@ -16,14 +16,12 @@
   <animation>
     <!-- Objets opaques -->
     <object-name>fuselage</object-name>
-    <object-name>interieur</object-name>
     <object-name>ailes</object-name>
     <object-name>aileronG</object-name>
     <object-name>aileronD</object-name>
+    <object-name>moteurs</object-name>
     <object-name>moteurG</object-name>
-    <object-name>intmoteurG</object-name>
     <object-name>moteurD</object-name>
-    <object-name>intmoteurD</object-name>
     <object-name>tourvitres</object-name>
     <object-name>derive</object-name>
     <object-name>direction</object-name>
@@ -44,6 +42,7 @@
     <object-name>voletG2</object-name>
     <object-name>voletD1</object-name>
     <object-name>voletD2</object-name>
+    <object-name>entrees</object-name>
     <object-name>airGI</object-name>
     <object-name>airGE</object-name>
     <object-name>airDI</object-name>
@@ -64,36 +63,14 @@
   </animation>
 
   <animation>
-    <type>noshadow</type>
-    <object-name>vitres</object-name>
-    <object-name>propdiscGA</object-name>
-    <object-name>propblurGA</object-name>
-    <object-name>propdiscGB</object-name>
-    <object-name>propblurGB</object-name>
-    <object-name>propdiscDA</object-name>
-    <object-name>propblurDA</object-name>
-    <object-name>propdiscDB</object-name>
-    <object-name>propblurDB</object-name>
-  </animation>
-
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
-    <object-name>vitres</object-name>
-  </animation>
-
-  <animation>
     <type>material</type>
     <object-name>fuselage</object-name>
-    <object-name>interieur</object-name>
     <object-name>ailes</object-name>
     <object-name>aileronG</object-name>
     <object-name>aileronD</object-name>
+    <object-name>moteurs</object-name>
     <object-name>moteurG</object-name>
-    <object-name>intmoteurG</object-name>
     <object-name>moteurD</object-name>
-    <object-name>intmoteurD</object-name>
     <object-name>tourvitres</object-name>
     <object-name>derive</object-name>
     <object-name>direction</object-name>
@@ -114,6 +91,7 @@
     <object-name>voletG2</object-name>
     <object-name>voletD1</object-name>
     <object-name>voletD2</object-name>
+    <object-name>entrees</object-name>
     <object-name>airGI</object-name>
     <object-name>airGE</object-name>
     <object-name>airDI</object-name>
@@ -153,6 +131,59 @@
       <shininess-prop>shininess</shininess-prop>
     </shininess>
 -->
+  </animation>
+
+  <effect>
+    <inherits-from>Aircraft/DO-26/Models/Effects/Do26reflect</inherits-from>
+    <object-name>fuselage</object-name>
+    <object-name>ailes</object-name>
+    <object-name>aileronG</object-name>
+    <object-name>aileronD</object-name>
+    <object-name>moteurs</object-name>
+    <object-name>moteurG</object-name>
+    <object-name>moteurD</object-name>
+    <object-name>tourvitres</object-name>
+    <object-name>derive</object-name>
+    <object-name>direction</object-name>
+    <object-name>ailes2</object-name>
+    <object-name>profondeurG</object-name>
+    <object-name>profondeurD</object-name>
+    <object-name>bolGA</object-name>
+    <object-name>bolGB</object-name>
+    <object-name>bolDA</object-name>
+    <object-name>bolDB</object-name>
+    <object-name>flotteurG</object-name>
+    <object-name>flotteurD</object-name>
+    <object-name>voletG1</object-name>
+    <object-name>voletG2</object-name>
+    <object-name>voletD1</object-name>
+    <object-name>voletD2</object-name>
+    <object-name>entrees</object-name>
+    <object-name>airGI</object-name>
+    <object-name>airGE</object-name>
+    <object-name>airDI</object-name>
+    <object-name>airDE</object-name>
+    <object-name>porte</object-name>
+  </effect>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>vitres</object-name>
+    <object-name>propdiscGA</object-name>
+    <object-name>propblurGA</object-name>
+    <object-name>propdiscGB</object-name>
+    <object-name>propblurGB</object-name>
+    <object-name>propdiscDA</object-name>
+    <object-name>propblurDA</object-name>
+    <object-name>propdiscDB</object-name>
+    <object-name>propblurDB</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>vitres</object-name>
   </animation>
 
   <!-- Effets de vagues en particules -->
