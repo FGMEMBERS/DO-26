@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>interior.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>interieur</object-name>
+    <object-name>inttourvitres</object-name>
+    <object-name>intporte</object-name>
+    <object-name>inttour</object-name>
+
+    <!-- Objets transparents -->
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <!-- Pilote -->
+  <model>
+    <path>Aircraft/DO-26/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -7.877 </x-m>
+      <y-m> -0.511 </y-m>
+      <z-m> -1.651 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Tableau de bord -->
+  <model>
+    <path>Aircraft/DO-26/Models/Interior/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -8.471 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -1.946 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>
+

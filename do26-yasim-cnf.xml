@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList include="do26-base.xml">
+
+  <sim>
+
+    <description>Dornier Do 26 (YASim)</description>
+    <flight-model archive="y">yasim</flight-model>
+    <aero archive="y">do26-yasim</aero>
+
+  </sim>
+ 
+</PropertyList>
